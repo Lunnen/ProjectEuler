@@ -3,6 +3,7 @@ fun main() {
     val fromOneToThisNumber = 20
     val values: MutableList<Long> = mutableListOf()
 
+    /* Fill array with nr's to calc */
     for(i in 1 until fromOneToThisNumber) {
         values.add(i.toLong())
     }
