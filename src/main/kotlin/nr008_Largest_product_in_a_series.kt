@@ -10,8 +10,16 @@ fun main() {
     theList.forEach {
         for(i in 0 until it.size-12){
 
-            val combo = it[i] * it[i+1]  * it[i+2]  * it[i+3] * it[i+4] * it[i+5]  * it[i+6]  * it[i+7]  * it[i+8] * it[i+9]  * it[i+10]  * it[i+11]  * it[i+12]
-            if ( combo > largestCombo) largestCombo = combo
+            var combo = 1L
+
+            var counter = 0
+            repeat(13){
+
+                combo *= theList.first()[i+counter]
+                if ( combo > largestCombo) largestCombo = combo
+
+                counter++
+            }
     }
 
     println(largestCombo)
